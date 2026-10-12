@@ -1,0 +1,26 @@
+{
+  "themeTitle": "The Learning Museum",
+  "themeText": "<p><strong>Coming soon.</strong> The programme will be published here.</p>",
+  "scheduleTitle": "Schedule",
+  "items": [],
+  "emptyText": "",
+  "call": {
+    "status": "upcoming",
+    "title": "Call for contributions",
+    "text": "We will invite museum professionals to share projects, research and experience on the theme of the learning museum. Formats, criteria and the deadline will be published here.",
+    "deadline": "",
+    "buttonLabel": "Submit a proposal",
+    "url": "",
+    "file": ""
+  },
+  "livestream": {
+    "status": "upcoming",
+    "title": "Livestream",
+    "text": "The plenary sessions will be streamed live. The link will be published here before the symposium.",
+    "buttonLabel": "Watch the livestream",
+    "url": ""
+  },
+  "documentsTitle": "Documents and downloads",
+  "documentsText": "Presentations, the programme as PDF and other materials will be available here.",
+  "documents": []
+}
