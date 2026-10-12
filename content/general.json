@@ -1,0 +1,34 @@
+{
+  "notice": {
+    "show": true,
+    "label": "Preview",
+    "text": "The programme and fees will be published here in the coming months."
+  },
+  "edition": "19th International Bodensee Symposium",
+  "organisers": "ICOM Germany · Austria · Switzerland · Guests: ICOM France and ICOM Italy",
+  "theme": "The Learning Museum",
+  "date": "25–26 May 2027",
+  "place": "Museum Quarter, Bern, Switzerland",
+  "emyaLabel": "EMYA2027, 26–30 May",
+  "emyaUrl": "https://www.emya2027bern.com/",
+  "aboutTitle": "From Lake Constance to Bern",
+  "aboutLead": "Every three years, the ICOM national committees of Germany, Austria and Switzerland meet for the International Bodensee Symposium. In 2027, ICOM Switzerland hosts the 19th edition at the Bern Museum Quarter.",
+  "aboutText": "<p>The symposium takes its name from Lake Constance (Bodensee), where the three countries meet, and moves between the three committees in turn. It is a place for museum professionals to compare practice across borders and to discuss what museum work needs next. Reflecting Switzerland's languages and neighbours, ICOM France and ICOM Italy join this edition as guests.</p><p>The symposium is part of a week that belongs to Europe's museums. From 26 to 30 May 2027, Bern hosts EMYA2027, the 50th-anniversary edition of the European Museum of the Year Award. Registration for both events runs through the EMYA2027 website.</p>",
+  "weekTitle": "The week in Bern",
+  "week": [
+    {
+      "when": "Tue 25 – Wed 26 May",
+      "title": "19th International Bodensee Symposium",
+      "text": "The Learning Museum, at the Bern Museum Quarter. Organised by ICOM Germany, ICOM Austria and ICOM Switzerland, with ICOM France and ICOM Italy as guests.",
+      "url": "",
+      "highlight": true
+    },
+    {
+      "when": "Wed 26 – Sun 30 May",
+      "title": "EMYA2027 Annual Conference and Awards Ceremony",
+      "text": "50 years of the European Museum of the Year Award, hosted by the Bern Museum Quarter: conference days, an anniversary symposium and the Awards Ceremony with gala dinner.",
+      "url": "https://www.emya2027bern.com/",
+      "highlight": false
+    }
+  ]
+}

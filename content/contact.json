@@ -1,0 +1,45 @@
+{
+  "title": "Organisers",
+  "text": "The 19th Bodensee Symposium is organised by ICOM Switzerland together with ICOM Germany and ICOM Austria. Reflecting Switzerland's languages and neighbours, ICOM France and ICOM Italy take part as guests. The ICOM Switzerland secretariat answers all questions about the programme, registration and partnerships.",
+  "organisers": [
+    {
+      "name": "ICOM Switzerland",
+      "role": "Host of the 2027 edition",
+      "url": "https://www.museums.ch"
+    },
+    {
+      "name": "ICOM Germany",
+      "role": "Co-organiser",
+      "url": "https://icom-deutschland.de"
+    },
+    {
+      "name": "ICOM Austria",
+      "role": "Co-organiser",
+      "url": "https://icom-oesterreich.at"
+    },
+    {
+      "name": "ICOM France",
+      "role": "Guest committee",
+      "url": "https://www.icom-musees.fr"
+    },
+    {
+      "name": "ICOM Italy",
+      "role": "Guest committee",
+      "url": "https://www.icom-italia.org"
+    }
+  ],
+  "addressName": "ICOM Switzerland",
+  "address": "Konradstrasse 14\n8005 Zurich\nSwitzerland",
+  "email": "info@museums.ch",
+  "phone": "+41 44 244 06 50",
+  "formTitle": "Send us a message",
+  "formText": "Your message goes to the ICOM Switzerland secretariat at info@museums.ch.",
+  "formEndpoint": "",
+  "subjects": [
+    "General question",
+    "Programme and call for contributions",
+    "Registration and fees",
+    "Partnership and sponsoring",
+    "Press"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "upcoming",
+  "title": "Registration via EMYA2027",
+  "text": "Registration for the Bodensee Symposium runs through the EMYA2027 website. The link below takes you to the registration form as soon as it opens.",
+  "buttonLabel": "Register on emya2027bern.com",
+  "url": "https://www.emya2027bern.com/",
+  "feesTitle": "Fees",
+  "fees": [
+    {
+      "category": "ICOM members",
+      "detail": "",
+      "price": "To be announced"
+    },
+    {
+      "category": "Non-members",
+      "detail": "",
+      "price": "To be announced"
+    },
+    {
+      "category": "Students and emerging museum professionals",
+      "detail": "",
+      "price": "To be announced"
+    }
+  ],
+  "note": "Fees will be confirmed when registration opens. Travel and accommodation are not included."
+}

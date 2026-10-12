@@ -1,0 +1,41 @@
+{
+  "venueTitle": "Venue",
+  "venueName": "Bern Museum Quarter",
+  "venueAddress": "Helvetiaplatz\n3005 Bern\nSwitzerland",
+  "venueText": "The Museum Quarter brings together eleven institutions around Helvetiaplatz. The exact rooms will be announced here.",
+  "mapUrl": "https://www.google.com/maps/search/?api=1&query=Helvetiaplatz%2C+3005+Bern",
+  "travelTitle": "Getting there",
+  "travelText": "Bern lies at the heart of the Swiss rail network. Most international guests fly into Zurich or Geneva and continue by train. From Bern station, trams 6, 7 and 8 and bus 19 run to the Helvetiaplatz stop at the Museum Quarter.",
+  "travel": [
+    {
+      "from": "Bern station to Helvetiaplatz",
+      "time": "approx. 5 min by tram"
+    },
+    {
+      "from": "Zurich Airport",
+      "time": "approx. 1 h 15 min"
+    },
+    {
+      "from": "Geneva Airport",
+      "time": "approx. 2 h"
+    },
+    {
+      "from": "Zurich main station",
+      "time": "approx. 1 h"
+    },
+    {
+      "from": "Basel",
+      "time": "approx. 1 h"
+    }
+  ],
+  "travelLinkLabel": "Timetable and tickets (SBB)",
+  "travelLinkUrl": "https://www.sbb.ch/en",
+  "hotelsTitle": "Hotels",
+  "hotelsText": "EMYA2027 takes place in the same week, so we recommend booking early.",
+  "hotels": [],
+  "hotelsEmpty": "Recommended hotels, and any special rates for participants, will be listed here.",
+  "bookingLabel": "Find accommodation via Bern Welcome",
+  "bookingUrl": "https://www.bern.com/en",
+  "bernTicket": "Overnight guests receive the free Bern-Ticket from their hotel. It covers buses, trams and trains in zones 100/101 for the whole stay.",
+  "bernTicketUrl": "https://www.bern.com/en/bern-ticket"
+}
