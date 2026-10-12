@@ -34,7 +34,7 @@
   "phone": "+41 44 244 06 50",
   "formTitle": "Send us a message",
   "formText": "Your message goes to the ICOM Switzerland secretariat at info@museums.ch.",
-  "formEndpoint": "",
+  "formEndpoint": "https://formspree.io/f/xkjozazo",
   "subjects": [
     "General question",
     "Programme and call for contributions",
