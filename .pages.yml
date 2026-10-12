@@ -1,0 +1,535 @@
+# Pages CMS – Redaktionsoberfläche für die Website des Bodensee-Symposiums 2027
+# Inhalte bleiben auf Englisch, die Feldbezeichnungen sind auf Deutsch.
+
+media:
+  - name: images
+    label: Bilder und Logos
+    input: uploads/images
+    output: uploads/images
+    categories: [image]
+  - name: docs
+    label: Dokumente
+    input: uploads/docs
+    output: uploads/docs
+    categories: [document, spreadsheet, compressed]
+
+settings:
+  commit:
+    identity: user
+
+content:
+  # ---------------------------------------------------------------
+  - name: general
+    label: "1 · Startseite und Allgemeines"
+    description: Hinweisbalken, Datum, Ort, Thema und der Abschnitt «About».
+    type: file
+    path: content/general.json
+    format: json
+    fields:
+      - name: notice
+        label: Hinweisbalken oben
+        type: object
+        fields:
+          - name: show
+            label: Hinweisbalken anzeigen
+            type: boolean
+          - name: label
+            label: Kurzlabel
+            description: z. B. «Preview» oder «News»
+            type: string
+          - name: text
+            label: Text
+            type: string
+      - name: edition
+        label: Ausgabe (kleine Zeile über dem Titel)
+        type: string
+      - name: organisers
+        label: Veranstalter (kleine Zeile rechts oben)
+        type: string
+      - name: theme
+        label: Thema
+        type: string
+      - name: date
+        label: Datum
+        description: So wie es auf der Seite stehen soll, z. B. «25–26 May 2027»
+        type: string
+      - name: place
+        label: Ort
+        type: string
+      - name: emyaLabel
+        label: Hinweis EMYA (Text)
+        type: string
+      - name: emyaUrl
+        label: Hinweis EMYA (Link)
+        type: string
+      - name: aboutTitle
+        label: About – Titel
+        type: string
+      - name: aboutLead
+        label: About – Einleitung (gross)
+        type: text
+      - name: aboutText
+        label: About – Text
+        type: rich-text
+        options:
+          format: html
+          switcher: false
+          media: false
+      - name: weekTitle
+        label: Wochenübersicht – Titel
+        type: string
+      - name: week
+        label: Wochenübersicht
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{when} – {title}"
+        fields:
+          - name: when
+            label: Datum
+            type: string
+          - name: title
+            label: Titel
+            type: string
+          - name: text
+            label: Beschreibung
+            type: text
+          - name: url
+            label: Link (optional)
+            type: string
+          - name: highlight
+            label: Als «unser» Termin markieren (blaues Quadrat)
+            type: boolean
+
+  # ---------------------------------------------------------------
+  - name: programme
+    label: "2 · Programm, Call, Livestream, Downloads"
+    description: Thema, Programmpunkte, Call for Contributions, Livestream-Link und Dokumente zum Herunterladen.
+    type: file
+    path: content/programme.json
+    format: json
+    fields:
+      - name: themeTitle
+        label: Thema – Titel
+        type: string
+      - name: themeText
+        label: Thema – Text
+        type: rich-text
+        options:
+          format: html
+          switcher: false
+          media: false
+      - name: scheduleTitle
+        label: Programm – Titel
+        type: string
+      - name: items
+        label: Programmpunkte
+        description: Solange keine Programmpunkte erfasst sind, erscheint der Platzhaltertext darunter.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{time} {title}"
+        fields:
+          - name: time
+            label: Zeit
+            description: z. B. «09:30» oder «09:30–10:15»
+            type: string
+          - name: format
+            label: Format
+            type: select
+            options:
+              values: [Welcome, Keynote, Panel, Talk, Workshop, Break, Lunch, Excursion, Reception]
+          - name: title
+            label: Titel
+            type: string
+          - name: speakers
+            label: Referierende / Moderation
+            type: string
+          - name: text
+            label: Kurzbeschreibung
+            type: text
+          - name: language
+            label: Sprache
+            type: select
+            options:
+              values: [English, German, "English and German"]
+          - name: streamed
+            label: Wird gestreamt
+            type: boolean
+      - name: emptyText
+        label: Platzhaltertext, solange das Programm fehlt
+        description: Leer lassen = der Block «Schedule» erscheint erst mit dem ersten Programmpunkt.
+        type: string
+      - name: call
+        label: Call for Contributions
+        type: object
+        fields:
+          - name: status
+            label: Status
+            description: Der Button erscheint nur bei «Offen».
+            type: select
+            options:
+              values:
+                - { name: upcoming, label: "Folgt (noch nicht offen)" }
+                - { name: open, label: "Offen" }
+                - { name: closed, label: "Geschlossen" }
+          - name: title
+            label: Titel
+            type: string
+          - name: text
+            label: Text
+            type: text
+          - name: deadline
+            label: Eingabeschluss
+            description: z. B. «31 January 2027»
+            type: string
+          - name: buttonLabel
+            label: Button-Text
+            type: string
+          - name: url
+            label: Link zum Eingabeformular
+            type: string
+          - name: file
+            label: Ausschreibung als PDF (optional)
+            type: file
+            options:
+              media: docs
+      - name: livestream
+        label: Livestream (Plenum)
+        type: object
+        fields:
+          - name: status
+            label: Status
+            description: Der Button erscheint bei «Live» und «Beendet».
+            type: select
+            options:
+              values:
+                - { name: upcoming, label: "Link folgt" }
+                - { name: live, label: "Live" }
+                - { name: ended, label: "Beendet (Aufzeichnung)" }
+          - name: title
+            label: Titel
+            type: string
+          - name: text
+            label: Text
+            type: text
+          - name: buttonLabel
+            label: Button-Text
+            type: string
+          - name: url
+            label: Link zum Stream oder zur Aufzeichnung
+            type: string
+      - name: documentsTitle
+        label: Downloads – Titel
+        type: string
+      - name: documentsText
+        label: Downloads – Hinweistext
+        type: string
+      - name: documents
+        label: Downloads
+        description: PDF hochladen ODER einen Link eintragen.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Beschreibung (optional)
+            type: string
+          - name: file
+            label: Datei
+            type: file
+            options:
+              media: docs
+          - name: url
+            label: oder Link
+            type: string
+
+  # ---------------------------------------------------------------
+  - name: registration
+    label: "3 · Anmeldung und Preise"
+    type: file
+    path: content/registration.json
+    format: json
+    fields:
+      - name: status
+        label: Status der Anmeldung
+        type: select
+        options:
+          values:
+            - { name: upcoming, label: "Folgt" }
+            - { name: open, label: "Offen" }
+            - { name: closed, label: "Geschlossen" }
+      - name: title
+        label: Titel
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: buttonLabel
+        label: Button-Text
+        type: string
+      - name: url
+        label: Link zur Anmeldung (EMYA2027)
+        type: string
+      - name: feesTitle
+        label: Preise – Titel
+        type: string
+      - name: fees
+        label: Preiskategorien
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{category}: {price}"
+        fields:
+          - name: category
+            label: Kategorie
+            type: string
+          - name: detail
+            label: Zusatz (optional)
+            type: string
+          - name: price
+            label: Preis
+            description: z. B. «CHF 120» oder «To be announced»
+            type: string
+      - name: note
+        label: Hinweis unter der Tabelle
+        type: text
+
+  # ---------------------------------------------------------------
+  - name: venue
+    label: "4 · Ort, Anreise und Hotels"
+    type: file
+    path: content/venue.json
+    format: json
+    fields:
+      - name: venueTitle
+        label: Austragungsort – Überschrift
+        type: string
+      - name: venueName
+        label: Name des Austragungsorts
+        type: string
+      - name: venueAddress
+        label: Adresse
+        type: text
+      - name: venueText
+        label: Zusatzinfo
+        type: text
+      - name: mapUrl
+        label: Link zur Karte (z. B. Google Maps oder map.geo.admin.ch)
+        type: string
+      - name: travelTitle
+        label: Anreise – Überschrift
+        type: string
+      - name: travelText
+        label: Anreise – Text
+        type: text
+      - name: travel
+        label: Reisezeiten
+        type: object
+        list: true
+        fields:
+          - name: from
+            label: Von
+            type: string
+          - name: time
+            label: Dauer
+            type: string
+      - name: travelLinkLabel
+        label: Fahrplan-Link – Text
+        type: string
+      - name: travelLinkUrl
+        label: Fahrplan-Link – Adresse
+        type: string
+      - name: hotelsTitle
+        label: Hotels – Überschrift
+        type: string
+      - name: hotelsText
+        label: Hotels – Text
+        type: text
+      - name: hotels
+        label: Hotels
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: area
+            label: Lage
+            description: z. B. «5 min walk from the venue»
+            type: string
+          - name: note
+            label: Hinweis
+            description: z. B. Sonderpreis oder Buchungscode
+            type: string
+          - name: url
+            label: Website
+            type: string
+      - name: hotelsEmpty
+        label: Platzhaltertext, solange keine Hotels erfasst sind
+        type: string
+      - name: bookingLabel
+        label: Buchungs-Link – Text
+        type: string
+      - name: bookingUrl
+        label: Buchungs-Link – Adresse
+        type: string
+      - name: bernTicket
+        label: Hinweis Bern-Ticket
+        type: text
+      - name: bernTicketUrl
+        label: Bern-Ticket – Link
+        type: string
+
+  # ---------------------------------------------------------------
+  - name: partners
+    label: "5 · Partner und Sponsoren"
+    type: file
+    path: content/partners.json
+    format: json
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: text
+        label: Einleitung
+        type: text
+      - name: partners
+        label: Partner und Sponsoren
+        description: Logo am besten als PNG oder SVG mit transparentem Hintergrund.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: category
+            label: Kategorie
+            type: select
+            options:
+              values:
+                - { name: host, label: "Gastgeber" }
+                - { name: partner, label: "Partner" }
+                - { name: sponsor, label: "Sponsor" }
+                - { name: media, label: "Medienpartner" }
+                - { name: supporter, label: "Unterstützt von" }
+          - name: logo
+            label: Logo
+            type: image
+            options:
+              media: images
+          - name: url
+            label: Website
+            type: string
+      - name: emptyText
+        label: Platzhaltertext, solange keine Partner erfasst sind
+        type: string
+      - name: becomeTitle
+        label: «Partner werden» – Titel
+        type: string
+      - name: becomeText
+        label: «Partner werden» – Text
+        type: text
+      - name: becomeButton
+        label: «Partner werden» – Button-Text
+        type: string
+
+  # ---------------------------------------------------------------
+  - name: contact
+    label: "6 · Veranstalter und Kontakt"
+    type: file
+    path: content/contact.json
+    format: json
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: organisers
+        label: Veranstalter
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: role
+            label: Rolle
+            type: string
+          - name: url
+            label: Website
+            type: string
+      - name: addressName
+        label: Absender (Name)
+        type: string
+      - name: address
+        label: Adresse
+        type: text
+      - name: email
+        label: E-Mail
+        type: string
+      - name: phone
+        label: Telefon
+        type: string
+      - name: formTitle
+        label: Formular – Titel
+        type: string
+      - name: formText
+        label: Formular – Hinweis
+        type: string
+      - name: formEndpoint
+        label: Formular-Adresse (Formspree)
+        description: "Endpoint aus Formspree einfügen, z. B. https://formspree.io/f/abcdwxyz. Leer = Formular nicht aktiv."
+        type: string
+      - name: subjects
+        label: Betreff-Auswahl im Formular
+        type: string
+        list: true
+
+  # ---------------------------------------------------------------
+  - name: legal
+    label: "7 · Datenschutz und Impressum"
+    type: file
+    path: content/legal.json
+    format: json
+    fields:
+      - name: privacyTitle
+        label: Datenschutz – Titel
+        type: string
+      - name: privacy
+        label: Datenschutzerklärung
+        type: rich-text
+        options:
+          format: html
+          switcher: false
+          media: false
+      - name: updated
+        label: Stand
+        type: string
+      - name: imprintTitle
+        label: Impressum – Titel
+        type: string
+      - name: imprint
+        label: Impressum
+        type: rich-text
+        options:
+          format: html
+          switcher: false
+          media: false
+
