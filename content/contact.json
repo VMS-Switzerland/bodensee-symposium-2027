@@ -25,13 +25,12 @@
     {
       "name": "ICOM Italy",
       "role": "Guest committee",
-      "url": "https://www.icom-italia.org"
+      "url": "https://www.icom-italia.org/"
     }
   ],
   "addressName": "ICOM Switzerland",
   "address": "Konradstrasse 14\n8005 Zurich\nSwitzerland",
   "email": "info@museums.ch",
-  "phone": "+41 44 244 06 50",
   "formTitle": "Send us a message",
   "formText": "Your message goes to the ICOM Switzerland secretariat at info@museums.ch.",
   "formEndpoint": "https://formspree.io/f/xrpelvyk",
