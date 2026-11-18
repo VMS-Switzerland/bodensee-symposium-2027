@@ -8,18 +8,15 @@
   "fees": [
     {
       "category": "ICOM members",
-      "detail": "",
-      "price": "To be announced"
+      "price": "Early Bird 100 CHF, Late registration 150 CHF"
     },
     {
       "category": "Non-members",
-      "detail": "",
-      "price": "To be announced"
+      "price": "Early Bird 150 CHF, Late Registration 200 CHF"
     },
     {
       "category": "Students and emerging museum professionals",
-      "detail": "",
-      "price": "To be announced"
+      "price": "50 CHF"
     }
   ],
   "note": "Fees will be confirmed when registration opens. Travel and accommodation are not included."
