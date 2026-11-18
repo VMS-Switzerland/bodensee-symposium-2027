@@ -1,8 +1,8 @@
 {
   "venueTitle": "Venue",
-  "venueName": "Bern Museum Quarter",
+  "venueName": "Bern Museumsquartier",
   "venueAddress": "Helvetiaplatz\n3005 Bern\nSwitzerland",
-  "venueText": "The Museum Quarter brings together eleven institutions around Helvetiaplatz. The exact rooms will be announced here.",
+  "venueText": "The Museumsquartier brings together eleven institutions around Helvetiaplatz. The exact rooms will be announced here.",
   "mapUrl": "https://www.google.com/maps/search/?api=1&query=Helvetiaplatz%2C+3005+Bern",
   "travelTitle": "Getting there",
   "travelText": "Bern lies at the heart of the Swiss rail network. Most international guests fly into Zurich or Geneva and continue by train. From Bern station, trams 6, 7 and 8 and bus 19 run to the Helvetiaplatz stop at the Museum Quarter.",
@@ -32,7 +32,6 @@
   "travelLinkUrl": "https://www.sbb.ch/en",
   "hotelsTitle": "Hotels",
   "hotelsText": "EMYA2027 takes place in the same week, so we recommend booking early.",
-  "hotels": [],
   "hotelsEmpty": "Recommended hotels, and any special rates for participants, will be listed here.",
   "bookingLabel": "Find accommodation via Bern Welcome",
   "bookingUrl": "https://www.bern.com/en",
