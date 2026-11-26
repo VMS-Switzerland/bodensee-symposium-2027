@@ -83,7 +83,7 @@
     $("#f-reg").textContent = regState + (reg.status === "closed" ? "" : " via EMYA2027");
 
     var regUrl = href(reg.url);
-    ["#bar-register", "#hero-register"].forEach(function (id) {
+    ["#hero-register"].forEach(function (id) {   // the header button always opens the Registration section
       var a = $(id);
       if (regUrl) a.setAttribute("href", regUrl);
     });
